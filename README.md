@@ -23,5 +23,5 @@ go build -o api .
 
 Then call the API and the correct file contents will be streamed to the response without leaking your private key:
 ```bash
-wget "http://localhost:5000/v1/telegram/file/your_file_id_here"
+wget http://localhost:5000/v1/telegram/file/your_file_id_here
 ```
