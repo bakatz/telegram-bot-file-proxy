@@ -1,10 +1,10 @@
 # telegram-bot-file-proxy
 
 ## What
-Proxies Telegram bot API requests to Telegram's file API.
+Proxies Telegram bot API requests to Telegram's [get file API](https://core.telegram.org/bots/api#getfile).
 
 ## Why
-Telegram's get file API (https://core.telegram.org/bots/api#getfile) uses links that you cannot share or pass downstream because they have your entire private key embedded.
+Telegram's [get file API](https://core.telegram.org/bots/api#getfile) uses links that you cannot share or pass downstream because they have your entire private key embedded.
 
 This simple service fixes that problem for you and includes a Dockerfile for easy deployment.
 
@@ -17,8 +17,8 @@ docker run -p 5000:5000 -e TELEGRAM_BOT_TOKEN=your_bot_token_here telegram-bot-f
 
 Or run it without docker:
 ```bash
-go build -o api .
-./api
+go build -o proxy .
+./proxy
 ```
 
 Then call the API and the correct file contents will be streamed to the response without leaking your private key:
