@@ -17,8 +17,8 @@ docker run -p 5000:5000 -e TELEGRAM_BOT_TOKEN=your_bot_token_here telegram-bot-f
 
 Or run it without docker:
 ```bash
-go build -o api .
-./api
+go build -o proxy .
+./proxy
 ```
 
 Then call the API and the correct file contents will be streamed to the response without leaking your private key:
