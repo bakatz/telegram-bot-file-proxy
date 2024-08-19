@@ -3,7 +3,7 @@
 ## What
 Proxies Telegram bot API requests to Telegram's [get file API](https://core.telegram.org/bots/api#getfile). This is meant for short-term use cases i.e. maybe you need to pass the file to a downstream system and don't want to waste money/disk space hosting the same image yourself.
 
-If you need long term image storage, it's better to upload the file from Telegram to something like Cloudflare R2 or Amazon S3. However, Telegram file links are always accessible for "at least 1 hour" according to their docs, which is enough for many use cases.
+If you need long term image storage, it's better to upload the file from Telegram to something like Cloudflare R2 or Amazon S3. However, Telegram file links are always accessible for "at least 1 hour" according to their docs, which is enough for many use cases without needing to pay for object storage.
 
 ## Why
 Telegram's [get file API](https://core.telegram.org/bots/api#getfile) uses links that you cannot share or pass downstream because they have your entire private key embedded.
