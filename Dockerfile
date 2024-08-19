@@ -28,4 +28,4 @@ COPY --from=builder /app/proxy .
 EXPOSE 5000
 
 # Run the binary
-CMD ["./main"]
+CMD ["./proxy"]
