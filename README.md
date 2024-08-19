@@ -4,7 +4,7 @@
 Proxies Telegram bot API requests to Telegram's file API.
 
 ## Why
-Telegram's get file API (https://core.telegram.org/bots/api#getfile) uses links that you cannot share because they have your entire private key embedded.
+Telegram's get file API (https://core.telegram.org/bots/api#getfile) uses links that you cannot share or pass downstream because they have your entire private key embedded.
 
 This simple service fixes that problem for you and includes a Dockerfile for easy deployment.
 
@@ -23,5 +23,5 @@ go build -o api .
 
 Then call the API and the correct file contents will be streamed to the response without leaking your private key:
 ```bash
-wget http://localhost:5000/v1/telegram/file/your_file_id_here
+wget http://localhost:5000/v1/telegram/files/your_file_id_here
 ```

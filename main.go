@@ -30,7 +30,7 @@ func main() {
 	e.Use(slogecho.New(logger))
 	e.Use(middleware.Recover())
 
-	e.GET("/v1/telegram/file/:file_id", func(c echo.Context) error {
+	e.GET("/v1/telegram/files/:file_id", func(c echo.Context) error {
 		return getFile(c, bot, logger)
 	})
 
